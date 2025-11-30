@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Señales Viales Pro - Seguridad y Cumplimiento en Cada Señal</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2C3E50",
+            "secondary": "#F39C12",
+            "background-light": "#F4F4F4",
+            "background-dark": "#101922",
+            "text-light": "#34495E",
+            "text-dark": "#E0E0E0",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <!-- TopNavBar -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 lg:px-8">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-primary dark:text-white">
+            <div class="size-6">
+              <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+              </svg>
+            </div>
+            <a href="/prototipo-tienda-online/" class="text-xl font-bold">Señales Pro</a>
+          </div>
+          <nav class="hidden items-center gap-9 lg:flex" id="navMenu">
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+              href="/prototipo-tienda-online/productos">Productos</a>
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary" href="/prototipo-tienda-online/nosotros">Nosotros</a>
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary" href="/prototipo-tienda-online/contacto">Contacto</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="/prototipo-tienda-online/carrito"
+            class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors relative flex items-center">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">1</span>
+          </a>
+          <a href="/prototipo-tienda-online/perfil" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer"
+            style="background-image: url('assets/imgs/no-profile.jpg')"></a>
+          <button class="md:hidden flex items-center justify-center h-10 w-10 text-primary dark:text-white"
+            id="btnMenu">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+      <!-- HeroSection -->
+      <section class="relative w-full @container">
+        <div
+          class="flex min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-4 text-center"
+          data-alt="A wide, clear highway with various traffic signs perfectly installed, under a bright blue sky."
+          style='background-image: linear-gradient(rgba(44, 62, 80, 0.6) 0%, rgba(44, 62, 80, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqpiSMHZhLA8QJtSPUE0pvy_3l1iZFJ9z77DxaVO8Ad4aBiUwfQLPwum2ppu3J0N2VcYTrrQWERyY-A_kkDse1gF8GXsv7Dtx87P1aTB5P20LwX_oIzNPrPLp8k5VM4WFEJymh3E_hu18tKa0OFkEC7XJt0YCJX94FEo2wPXUbjvCgu2G62XQ8yW6JMrG89GnRb5PXmk7iuSDZrxmwVIUqgP255u0oUaW2CoTa9U8736FYpnk0YETZg_MUQHKElXhBbgYrz7__fM08");'>
+          <div class="flex flex-col gap-4 max-w-3xl">
+            <h1 class="text-white text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl">Seguridad y
+              Cumplimiento en Cada Señal</h1>
+            <h2 class="text-gray-200 text-base font-normal leading-normal sm:text-lg">La más alta calidad y variedad en
+              señalización vial para garantizar la seguridad en tus proyectos.</h2>
+          </div>
+          <a href="/prototipo-tienda-online/productos"
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-secondary text-primary text-base font-bold leading-normal tracking-wide transition-transform hover:scale-105">
+            <span class="truncate">Explorar Catálogo</span>
+          </a>
+        </div>
+      </section>
+      <!-- Benefits Section -->
+      <section class="bg-background-light dark:bg-background-dark py-12 sm:py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="grid grid-cols-1 gap-8 text-center md:grid-cols-3 md:gap-6">
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-secondary">
+                <span class="material-symbols-outlined text-3xl">shield</span>
+              </div>
+              <h3 class="text-lg font-bold">Materiales Duraderos</h3>
+              <p class="text-sm max-w-xs">Fabricadas para resistir las condiciones más adversas y garantizar máxima
+                visibilidad.</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-secondary">
+                <span class="material-symbols-outlined text-3xl">verified</span>
+              </div>
+              <h3 class="text-lg font-bold">Cumple Normativa Oficial</h3>
+              <p class="text-sm max-w-xs">Todas nuestras señales cumplen con las regulaciones y certificaciones
+                vigentes.</p>
+            </div>
+            <div class="flex flex-col items-center gap-3">
+              <div
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/20 dark:text-secondary">
+                <span class="material-symbols-outlined text-3xl">local_shipping</span>
+              </div>
+              <h3 class="text-lg font-bold">Envío Rápido y Seguro</h3>
+              <p class="text-sm max-w-xs">Recibe tus productos donde los necesites con nuestro eficiente servicio de
+                logística.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Categories Section -->
+      <section class="py-12 sm:py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+          <h2 class="text-3xl font-bold tracking-tight text-center mb-8">Nuestras Categorías de Señales</h2>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div
+              class="group flex flex-col overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+              <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                data-alt="A yellow diamond-shaped traffic sign indicating a sharp curve ahead."
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBX21MJy5Stii7I0ei_9gXRNLMoNBEuxg6KgrHU9oIVpWbhPF1Kdx_QCKjro6E6_N2rmJidwNVmyzseQlIpWW0bbpdGaMy0x-YfnjDWUPBmNtT_exFUnKMPK0WVotA8gV-vldwJbRYovyuEHfuJo2XaVUhqHio5NXx3jOGTY7ZNxxoF191e6Vnn0_wQO4Njj_4ftbGo_0p8kvC4p3yTdCaqr-tGTmf5G6BZMEG-HLpOb4aIpOZQRfpdcTyivEiSw32xBQSWdhLo5Mb-");'>
+              </div>
+              <div class="p-4">
+                <p class="text-lg font-bold">Señales Preventivas</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Advierten sobre peligros potenciales en el camino.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+              <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                data-alt="A red octagonal STOP sign against a blue sky."
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZKqLinwDS7Cp6HtE7pz751C8NnTpR6aEW4aTxs4EICBvqDiuXXajcQ5IVbXnPCcC_PWAoSR5GzoJZVTuuNhnZ3GwuPlFEJs_ZNANi-UCi066bGB33msmSTGm5uVHHNzqozFFDi16mdhbVPlrvpyOVDc7Ln-jZS541fPAtxJv332TQ-mM-LAApVrlYBUiBwocse2SXdYxMI2NAXszxdaYpmxfllhbb2poURG9_5_pjt8qYT-h5SNSz0Jst6azW9SY_ZgFlvj97l-fy");'>
+              </div>
+              <div class="p-4">
+                <p class="text-lg font-bold">Señales Reglamentarias</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Indican limitaciones y prohibiciones de obligado
+                  cumplimiento.</p>
+              </div>
+            </div>
+            <div
+              class="group flex flex-col overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+              <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                data-alt="A blue rectangular sign with an arrow and text indicating a highway exit."
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3N4AvTK-H06evcemOQ501q1tvo_TGhJDTVUdGIEHLjFtEdsbhevytbl1iO55Ox2ZPPLpJBVoCqhOkdTPBOY18es4HAzNZdxoqvwwJHz_oJETdipGTUuFof82I_Vc6hMuoS02dBX_wutI6upG4pOJjymmwoQxMEgZavHq9c7MnBPhlUcKOeNK_8sn2LlsUO6YpCgGCDFKmtpAVCbXoH9-NPTNflO23IosN9FxEs8pCs2MmDhwK2QF2d3g_ayywqaDz3qgGOUkelOK0");'>
+              </div>
+              <div class="p-4">
+                <p class="text-lg font-bold">Señales Informativas</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">Guían y proporcionan información útil para el
+                  conductor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Products Section -->
+      <section class="bg-gray-100 dark:bg-gray-900 py-12 sm:py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+          <h2 class="text-3xl font-bold tracking-tight text-center mb-8">Productos Destacados</h2>
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Product Card 1 -->
+            <div
+              class="flex flex-col overflow-hidden rounded-xl bg-background-light dark:bg-gray-800 shadow-sm transition-transform hover:-translate-y-1">
+              <div class="bg-white dark:bg-gray-700 flex justify-center items-center p-4">
+                <img class="aspect-square w-full max-w-[200px] object-contain rounded-lg"
+                  data-alt="Imagen de una señal de tráfico de PARE octogonal y roja."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCmHK-bMXNmd1uxlDpZVUtwYjZTPJb9HAWDIsNVH_8nw5Gu_rHPj-D_k5S6S86h9ih9UhjjtjPUFq6S1QdSQ4tSXKu-DYBL5WtkHEhnCQOfuCUKR7IFmNokcZ6Z59Aa1i_Q52GNTjZB6q0Nqjg477xDg78W9WUXBSLLJ67Q5RK3vfbQOmvov1VvC0rTRH4ZNEl4ZoxyczIq72R9VyVH3QbK4bHc6FfYWyQX269CYuCHtOecZQW6_pG7gZUbmUc9oYNFM_mcL6QyZf1" />
+              </div>
+              <div class="p-4 flex flex-col flex-grow">
+                <h3 class="text-base font-bold flex-grow">Señal de PARE (R-1)</h3>
+                <p class="text-lg font-bold text-primary dark:text-secondary mt-2">$25.990</p>
+                <button
+                  class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">Añadir
+                  al carrito</button>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div
+              class="flex flex-col overflow-hidden rounded-xl bg-background-light dark:bg-gray-800 shadow-sm transition-transform hover:-translate-y-1">
+              <div class="bg-white dark:bg-gray-700 flex justify-center items-center p-4">
+                <img class="aspect-square w-full max-w-[200px] object-contain rounded-lg"
+                  data-alt="Imagen de una señal de límite de velocidad de 50 km/h."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7E09nQRAsAr3IhRcpq7_GAA5hX9hhQtE7Lofw1qGIIrVgOcyNXe1gfVP9-5KsbHq7iOcJSjlDU1gPSOM5tfD9z3bnB0RfApU93WffrOuprA_bxOLvnPFdMQp6IU7hm7aW3Ah7CjiQa1GGC9ozRDP9Rz_rfN7W1jbQX2CpDLiJivditxxc_3qNsoyJZ_mZVorjwb7ZtEw_YZwOClM7XNLjAjgAjgo9pLvkNtgKs2JQTERkMG14CCQxU5l8mzWVNxEeSCoNbe-_zJeZ" />
+              </div>
+              <div class="p-4 flex flex-col flex-grow">
+                <h3 class="text-base font-bold flex-grow">Límite de Velocidad 50 km/h</h3>
+                <p class="text-lg font-bold text-primary dark:text-secondary mt-2">$22.500</p>
+                <button
+                  class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">Añadir
+                  al carrito</button>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div
+              class="flex flex-col overflow-hidden rounded-xl bg-background-light dark:bg-gray-800 shadow-sm transition-transform hover:-translate-y-1">
+              <div class="bg-white dark:bg-gray-700 flex justify-center items-center p-4">
+                <img class="aspect-square w-full max-w-[200px] object-contain rounded-lg"
+                  data-alt="Imagen de una señal triangular de advertencia de paso de peatones."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqaOTC5mw_QoYHX_L7V5UW0T21r3lHElm2sdzgElKJhp5Urlz15RVC1GJLoK-pbaCCfqPVt9Q3ql7f7uA2tfHFgI_IjfCPBNOu4A8q0fy_jgf4Rk80oQ-eU9vxP92dHBfVSV-pxIlYO3tQQuKETqe3lbSk6Wj_b-VBjDr8HQvBz-vTZkBUECHlld7r_eojJo_vUfpPppIWDSb0Rj6xkyflCTWx5xgQiQafpP3FD2DsqoU-0_ejMBcvOuU05b048QaxQI2RQBq5wkpT" />
+              </div>
+              <div class="p-4 flex flex-col flex-grow">
+                <h3 class="text-base font-bold flex-grow">Paso de Peatones (P-20)</h3>
+                <p class="text-lg font-bold text-primary dark:text-secondary mt-2">$28.000</p>
+                <button
+                  class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">Añadir
+                  al carrito</button>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div
+              class="flex flex-col overflow-hidden rounded-xl bg-background-light dark:bg-gray-800 shadow-sm transition-transform hover:-translate-y-1">
+              <div class="bg-white dark:bg-gray-700 flex justify-center items-center p-4">
+                <img class="aspect-square w-full max-w-[200px] object-contain rounded-lg"
+                  data-alt="Imagen de una señal de advertencia de obras en la vía."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFY5WKgB92ku4ROsOIMD37KRILov4bp6tqEnoY17k2LAdgjhzigxcjgpYho4J3beD1rCCDwAm0M4OYJQXWML8KyadQnN5YFROlWrJzWM1uG7C0JqzYXkvIIP07-UI-MfWdL-vBq00cJIsWpb11eRNtjgazuFsUEW9x3TAbdbYC2M4E_1fQF4n3liQ0HnzWYKKx3piwf8_cCD98LZCNPzuZUxMB0Mw8ZsOMD8nmxOY71mVBpWLxBQvf04cLI4No2V2LnmXlAZh8eXIN" />
+              </div>
+              <div class="p-4 flex flex-col flex-grow">
+                <h3 class="text-base font-bold flex-grow">Señal de Obras Temporal</h3>
+                <p class="text-lg font-bold text-primary dark:text-secondary mt-2">$19.990</p>
+                <button
+                  class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90">Añadir
+                  al carrito</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Final CTA Section -->
+      <section class="bg-primary dark:bg-primary/90 text-white">
+        <div class="container mx-auto px-4 py-12 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold">¿Necesitas una Cotización Personalizada?</h2>
+          <p class="mt-2 mb-6 max-w-2xl mx-auto">Nuestro equipo de expertos está listo para ayudarte con tus proyectos
+            de señalización a gran escala. Contáctanos para obtener asesoramiento y precios especiales.</p>
+          <a href="/prototipo-tienda-online/contacto"
+            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-secondary text-primary text-base font-bold leading-normal tracking-wide mx-auto transition-transform hover:scale-105">
+            <span class="truncate">Contactar a un Experto</span>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-200 dark:bg-gray-900 text-text-light dark:text-text-dark">
+      <div class="container mx-auto px-4 py-8 lg:px-8">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div>
+            <h3 class="text-lg font-bold mb-2">Señales Pro</h3>
+            <p class="text-sm">Tu socio de confianza en seguridad vial y señalización.</p>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Navegación</h4>
+            <ul class="space-y-1 text-sm">
+              <li><a class="hover:text-secondary" href="/prototipo-tienda-online/productos">Productos</a></li>
+              <li><a class="hover:text-secondary" href="/prototipo-tienda-online/nosotros">Nosotros</a></li>
+              <li><a class="hover:text-secondary" href="/prototipo-tienda-online/contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Contacto</h4>
+            <ul class="space-y-1 text-sm">
+              <li>
+                <a href="mailto:contacto@senalespro.com">Email: contacto@senalespro.com</a>
+              </li>
+              <li>
+                <a href="tel:+34900123456">Teléfono: +34 900 123 456</a>
+              </li>
+              <li>
+                <a href="https://maps.app.goo.gl/hkFEZPYcYTLbspRH9">Dirección: Calle Falsa 123, Ciudad</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Síguenos</h4>
+            <div class="flex space-x-4">
+              <a class="hover:text-secondary" href="#">
+                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+                  <path clip-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </a>
+              <a class="hover:text-secondary" href="#">
+                <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-300 dark:border-gray-700 pt-4 text-center text-sm">
+          <p>© 2025 Señales Viales Pro. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

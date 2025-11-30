@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Carrito de Compras - Señales Viales Pro</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2C3E50",
+            "secondary": "#F39C12",
+            "background-light": "#F4F4F4",
+            "background-dark": "#101922",
+            "text-light": "#34495E",
+            "text-dark": "#E0E0E0",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-200">
+  <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <!-- TopNavBar Component -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 lg:px-8">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-primary dark:text-white">
+              <div class="size-6">
+                <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+                </svg>
+              </div>
+              <a href="/prototipo-tienda-online/" class="text-xl font-bold">Señales Pro</a>
+            </div>
+            <nav class="hidden items-center gap-9 lg:flex" id="navMenu">
+              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+                href="/prototipo-tienda-online/productos">Productos</a>
+              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+                href="/prototipo-tienda-online/nosotros">Nosotros</a>
+              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+                href="/prototipo-tienda-online/contacto">Contacto</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="/prototipo-tienda-online/carrito"
+              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors relative flex items-center">
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <span
+                class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">1</span>
+            </a>
+            <a href="/prototipo-tienda-online/perfil" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer"
+              style="background-image: url('../assets/imgs/no-profile.jpg')"></a>
+            <button class="md:hidden flex items-center justify-center h-10 w-10 text-primary dark:text-white"
+              id="btnMenu">
+              <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- Main Content Area -->
+      <main class="px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 py-10 flex-1">
+        <div class="layout-content-container mx-auto flex max-w-[1280px] flex-col flex-1 gap-8">
+          <!-- Breadcrumbs and Heading -->
+          <div class="flex flex-col gap-2">
+            <!-- Breadcrumbs Component -->
+            <div class="flex flex-wrap gap-2 items-center">
+              <a class="text-primary text-sm font-medium leading-normal" href="/prototipo-tienda-online/">Inicio</a>
+              <span class="text-slate-400 dark:text-slate-500 text-sm font-medium leading-normal">/</span>
+              <span class="text-[#0d141b] dark:text-slate-300 text-sm font-medium leading-normal">Carrito de
+                Compras</span>
+            </div>
+            <!-- PageHeading Component -->
+            <div class="flex flex-wrap justify-between gap-3 items-center">
+              <p class="text-[#0d141b] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Tu Carrito
+              </p>
+            </div>
+          </div>
+          <!-- Two-column layout for cart -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column: Product List -->
+            <div class="lg:col-span-2">
+              <div
+                class="overflow-hidden rounded-xl border border-[#cfdbe7] dark:border-slate-700 bg-white dark:bg-background-dark/50">
+                <!-- Table Component -->
+                <div class="overflow-x-auto">
+                  <table class="w-full">
+                    <thead class="bg-background-light dark:bg-slate-800">
+                      <tr>
+                        <th
+                          class="px-6 py-4 text-left text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider w-2/5">
+                          Producto</th>
+                        <th
+                          class="px-6 py-4 text-left text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider w-1/5">
+                          Precio</th>
+                        <th
+                          class="px-6 py-4 text-left text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider w-1/5">
+                          Cantidad</th>
+                        <th
+                          class="px-6 py-4 text-right text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider w-1/5">
+                          Total</th>
+                        <th
+                          class="px-6 py-4 text-right text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-wider">
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="border-t border-t-[#cfdbe7] dark:border-slate-700">
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center gap-4">
+                            <div class="flex-shrink-0 size-16 bg-center bg-no-repeat bg-cover rounded-lg bg-slate-100"
+                              data-alt="Señal de Pare octagonal roja"
+                              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZSufU9xk42R2-L_z1cMwNxYcrX1bz0CooWNE-uKDqTSbEzxNwC04A4OqpZI1tCfRTOkN_n9Z21xvoa_0SqvemtdXJCr50Phhr_Moi5xKM9JO3H6UrFgUBEzzkLW2-T6WjO6BrsOJZK57YJ8KTcQPGzRaJv-d-tnIqCXXO-1NyaRTn5hW_nGduo_of5GtnT0czb2P4qPJ7p0y1yaSbj93fKSse1p6ymmzjhDkDLHI9NcSjm_uPaGZ3Z5NSai8dD7z-8GanyAvA8Vfk");'>
+                            </div>
+                            <div>
+                              <p class="text-base font-semibold text-[#0d141b] dark:text-white">Señal de Pare (STOP)</p>
+                              <p class="text-sm text-slate-500 dark:text-slate-400">75cm, Reflectante Grado Ingeniería
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-slate-600 dark:text-slate-300 text-sm font-normal leading-normal whitespace-nowrap">
+                          $45.000</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div
+                            class="flex items-center border border-slate-300 dark:border-slate-600 rounded-md h-10 w-28">
+                            <button
+                              class="px-2 text-slate-500 dark:text-slate-400 h-full flex items-center justify-center">-</button>
+                            <input
+                              class="w-full text-center border-0 bg-transparent focus:ring-0 text-[#0d141b] dark:text-white"
+                              type="text" value="1" />
+                            <button
+                              class="px-2 text-slate-500 dark:text-slate-400 h-full flex items-center justify-center">+</button>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-right text-[#0d141b] dark:text-white text-sm font-semibold leading-normal whitespace-nowrap">
+                          $45.000</td>
+                        <td class="px-6 py-4 text-right whitespace-nowrap">
+                          <button class="text-slate-400 hover:text-red-500 dark:text-slate-500 dark:hover:text-red-400">
+                            <span class="material-symbols-outlined text-xl">delete</span>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="border-t border-t-[#cfdbe7] dark:border-slate-700">
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div class="flex items-center gap-4">
+                            <div class="flex-shrink-0 size-16 bg-center bg-no-repeat bg-cover rounded-lg bg-slate-100"
+                              data-alt="Señal de límite de velocidad circular"
+                              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbIhhiE75P5l_eVsLkHXZQeSNUUK-p4ynNUADnVjQvPQNJZQO3y4g_EVI1QYHhoIV5sBlPI8subb_G7p-RX_SbtAuu7AtmbdOaVEAw9ESIaqyFqDU3SDrzu7a2gUb6E3mylhwytsFpOAuVHI4lF0MWgNU38JHoLnDSHvhqTKNREWcBpA_Yb7AThvsaBYFax9ea_EbfTN0nF3EC3xDZdPqxjNoSJLxlyqYqw5V7c4agNNyVYpJ806vSjoSqVgC7ZQqdtd7vW-vBwcut");'>
+                            </div>
+                            <div>
+                              <p class="text-base font-semibold text-[#0d141b] dark:text-white">Límite de Velocidad
+                                50km/h</p>
+                              <p class="text-sm text-slate-500 dark:text-slate-400">60cm, Aluminio</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-slate-600 dark:text-slate-300 text-sm font-normal leading-normal whitespace-nowrap">
+                          $35.500</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                          <div
+                            class="flex items-center border border-slate-300 dark:border-slate-600 rounded-md h-10 w-28">
+                            <button
+                              class="px-2 text-slate-500 dark:text-slate-400 h-full flex items-center justify-center">-</button>
+                            <input
+                              class="w-full text-center border-0 bg-transparent focus:ring-0 text-[#0d141b] dark:text-white"
+                              type="text" value="2" />
+                            <button
+                              class="px-2 text-slate-500 dark:text-slate-400 h-full flex items-center justify-center">+</button>
+                          </div>
+                        </td>
+                        <td
+                          class="px-6 py-4 text-right text-[#0d141b] dark:text-white text-sm font-semibold leading-normal whitespace-nowrap">
+                          $71.000</td>
+                        <td class="px-6 py-4 text-right whitespace-nowrap">
+                          <button class="text-slate-400 hover:text-red-500 dark:text-slate-500 dark:hover:text-red-400">
+                            <span class="material-symbols-outlined text-xl">delete</span>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column: Order Summary -->
+            <div class="lg:col-span-1">
+              <div
+                class="bg-white dark:bg-background-dark/50 p-6 rounded-xl border border-[#cfdbe7] dark:border-slate-700 flex flex-col gap-6 sticky top-10">
+                <h3 class="text-xl font-bold text-[#0d141b] dark:text-white">Resumen del Pedido</h3>
+                <!-- DescriptionList Component -->
+                <div class="flex flex-col gap-2">
+                  <div class="flex justify-between gap-x-6 py-2">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Subtotal</p>
+                    <p class="text-[#0d141b] dark:text-slate-200 text-sm font-medium leading-normal text-right">$116.500
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-x-6 py-2">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Envío</p>
+                    <p class="text-[#0d141b] dark:text-slate-200 text-sm font-medium leading-normal text-right">$15.000
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-x-6 py-2">
+                    <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Impuestos (IVA)</p>
+                    <p class="text-[#0d141b] dark:text-slate-200 text-sm font-medium leading-normal text-right">$24.470
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-x-6 py-3 border-t border-slate-200 dark:border-slate-700 mt-2">
+                    <p class="text-[#0d141b] dark:text-white text-base font-bold leading-normal">Total</p>
+                    <p class="text-primary text-xl font-bold leading-normal text-right">$155.970</p>
+                  </div>
+                </div>
+                <!-- Action Buttons -->
+                <div class="flex flex-col gap-4">
+                  <a href="/prototipo-tienda-online/pago"
+                    class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-primary/90 transition-colors">Proceder
+                    al Pago</a>
+                  <a href="/prototipo-tienda-online/productos"
+                    class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 text-base font-bold hover:bg-slate-300 dark:hover:bg-slate-600 transition-colors">Seguir
+                    Comprando</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

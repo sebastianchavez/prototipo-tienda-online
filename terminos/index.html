@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Términos y Condiciones - Señales Viales Pro</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2C3E50",
+            "secondary": "#F39C12",
+            "background-light": "#F4F4F4",
+            "background-dark": "#101922",
+            "text-light": "#34495E",
+            "text-dark": "#E0E0E0",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <!-- TopNavBar -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 lg:px-8">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-primary dark:text-white">
+            <div class="size-6">
+              <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+              </svg>
+            </div>
+            <a href="/prototipo-tienda-online/" class="text-xl font-bold">Señales Pro</a>
+          </div>
+          <nav class="hidden items-center gap-9 lg:flex" id="navMenu">
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+              href="/prototipo-tienda-online/productos">Productos</a>
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary" href="/prototipo-tienda-online/nosotros">Nosotros</a>
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary" href="/prototipo-tienda-online/contacto">Contacto</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="/prototipo-tienda-online/carrito"
+            class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors relative flex items-center">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">1</span>
+          </a>
+          <a href="/prototipo-tienda-online/perfil" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer"
+            style="background-image: url('../assets/imgs/no-profile.jpg')"></a>
+          <button class="md:hidden flex items-center justify-center h-10 w-10 text-primary dark:text-white"
+            id="btnMenu">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="container mx-auto flex-grow px-4 py-8 lg:py-12">
+      <div class="flex flex-col lg:flex-row lg:gap-12">
+        <!-- SideNavBar -->
+        <aside class="w-full lg:w-64 xl:w-72 lg:sticky lg:top-24 self-start mb-8 lg:mb-0">
+          <div
+            class="flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4">
+            <div class="flex flex-col">
+              <h3 class="text-base font-bold text-slate-900 dark:text-slate-50">Navegación Rápida</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Términos y Condiciones</p>
+            </div>
+            <div class="flex flex-col gap-1">
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#introduccion">
+                <span class="material-symbols-outlined text-lg">info</span>
+                <p class="text-sm font-medium">1. Introducción</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#definiciones">
+                <span class="material-symbols-outlined text-lg">book</span>
+                <p class="text-sm font-medium">2. Definiciones</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#uso-sitio">
+                <span class="material-symbols-outlined text-lg">desktop_windows</span>
+                <p class="text-sm font-medium">3. Uso del Sitio Web</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#productos">
+                <span class="material-symbols-outlined text-lg">inventory_2</span>
+                <p class="text-sm font-medium">4. Productos y Pedidos</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#pago-envio">
+                <span class="material-symbols-outlined text-lg">credit_card</span>
+                <p class="text-sm font-medium">5. Pago y Envío</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#devoluciones">
+                <span class="material-symbols-outlined text-lg">assignment_return</span>
+                <p class="text-sm font-medium">6. Devoluciones</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#responsabilidad">
+                <span class="material-symbols-outlined text-lg">gavel</span>
+                <p class="text-sm font-medium">7. Limitación de Responsabilidad</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#privacidad">
+                <span class="material-symbols-outlined text-lg">lock</span>
+                <p class="text-sm font-medium">8. Política de Privacidad</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#ley-aplicable">
+                <span class="material-symbols-outlined text-lg">balance</span>
+                <p class="text-sm font-medium">9. Ley Aplicable</p>
+              </a>
+              <a class="flex items-center gap-3 rounded-lg px-3 py-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
+                href="#contacto">
+                <span class="material-symbols-outlined text-lg">mail</span>
+                <p class="text-sm font-medium">10. Contacto</p>
+              </a>
+            </div>
+          </div>
+        </aside>
+        <!-- Content Area -->
+        <article
+          class="flex-1 max-w-4xl prose prose-slate dark:prose-invert prose-h2:tracking-tight prose-h2:font-bold prose-p:leading-relaxed">
+          <!-- PageHeading -->
+          <div class="flex flex-col gap-2 border-b border-slate-200 dark:border-slate-800 pb-6 mb-8">
+            <h1 class="text-4xl font-black text-slate-900 dark:text-slate-50 tracking-tighter">Términos y Condiciones
+            </h1>
+            <p class="text-base text-slate-500 dark:text-slate-400">Última actualización: 30 de noviembre de 2025</p>
+          </div>
+          <!-- Section 1 -->
+          <section class="space-y-4 scroll-mt-24" id="introduccion">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">1. Introducción</h2>
+            <p>Bienvenido a Señales Viales Pro. Al acceder y utilizar este sitio web, usted acepta cumplir y estar
+              sujeto a los siguientes términos y condiciones de uso, que junto con nuestra política de privacidad rigen
+              nuestra relación con usted en relación con este sitio web. Si no está de acuerdo con alguna parte de estos
+              términos y condiciones, por favor no utilice nuestro sitio web.</p>
+          </section>
+          <!-- Section 2 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="definiciones">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">2. Definiciones</h2>
+            <p>El término 'Señales Viales Pro' o 'nosotros' se refiere al propietario del sitio web. El término 'usted'
+              se refiere al usuario o visitante de nuestro sitio web. 'Producto' se refiere a cualquier señal de
+              tráfico, accesorio o artículo disponible para la venta en el sitio web.</p>
+          </section>
+          <!-- Section 3 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="uso-sitio">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">3. Uso del Sitio Web</h2>
+            <p>El contenido de las páginas de este sitio web es para su información y uso general únicamente. Está
+              sujeto a cambios sin previo aviso. Ni nosotros ni terceros ofrecemos garantía alguna en cuanto a la
+              exactitud, puntualidad, rendimiento, integridad o idoneidad de la información y los materiales que se
+              encuentran u ofrecen en este sitio web para un propósito particular.</p>
+          </section>
+          <!-- Section 4 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="productos">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">4. Productos y Pedidos</h2>
+            <p>Todos los pedidos están sujetos a la disponibilidad del producto. Si un artículo no está en stock en el
+              momento de realizar el pedido, se lo notificaremos y le reembolsaremos el importe total de su pedido,
+              utilizando el método de pago original. Nos reservamos el derecho de rechazar cualquier pedido que realice
+              con nosotros.</p>
+          </section>
+          <!-- Section 5 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="pago-envio">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">5. Pago y Envío</h2>
+            <p>Los precios de nuestros productos están sujetos a cambios sin previo aviso. Aceptamos los principales
+              métodos de pago, como tarjetas de crédito y transferencias bancarias. Los costos de envío se basan en el
+              peso de su pedido y el método de entrega. La fecha de entrega de su pedido puede variar debido a las
+              prácticas de envío del transportista, la ubicación de la entrega, el método de entrega y los artículos
+              pedidos.</p>
+          </section>
+          <!-- Section 6 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="devoluciones">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">6. Devoluciones</h2>
+            <p>Nuestra política de devoluciones permite la devolución de productos sin usar en su embalaje original
+              dentro de los 30 días posteriores a su compra. Si han pasado 30 días desde su compra, lamentablemente no
+              podemos ofrecerle un reembolso o cambio. Para completar su devolución, requerimos un recibo o comprobante
+              de compra.</p>
+          </section>
+          <!-- Section 7 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="responsabilidad">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">7. Limitación de Responsabilidad</h2>
+            <p>En ningún caso Señales Viales Pro, ni sus directores, empleados, socios, agentes, proveedores o
+              afiliados, serán responsables de daños indirectos, incidentales, especiales, consecuentes o punitivos,
+              incluyendo, entre otros, la pérdida de beneficios, datos, uso, buena voluntad u otras pérdidas
+              intangibles, resultantes del acceso o uso o la incapacidad de acceder o utilizar el servicio.</p>
+          </section>
+          <!-- Section 8 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="privacidad">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">8. Política de Privacidad</h2>
+            <p>El uso de nuestro sitio web también se rige por nuestra Política de Privacidad. Por favor, revise nuestra
+              Política de Privacidad, que también gobierna el Sitio e informa a los usuarios de nuestras prácticas de
+              recopilación de datos. Puede encontrar un enlace a la Política de Privacidad en el pie de página de
+              nuestro sitio web.</p>
+          </section>
+          <!-- Section 9 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="ley-aplicable">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">9. Ley Aplicable</h2>
+            <p>Estos Términos se regirán e interpretarán de acuerdo con las leyes del país, sin tener en cuenta sus
+              disposiciones sobre conflictos de leyes. Nuestra incapacidad para hacer cumplir cualquier derecho o
+              disposición de estos Términos no se considerará una renuncia a dichos derechos.</p>
+          </section>
+          <!-- Section 10 -->
+          <section class="space-y-4 mt-12 scroll-mt-24" id="contacto">
+            <h2 class="text-2xl text-slate-900 dark:text-slate-100">10. Contacto</h2>
+            <p>Si tiene alguna pregunta sobre estos Términos, por favor contáctenos a través de nuestro formulario de
+              contacto en el sitio web o enviando un correo electrónico a soporte@senalesvialespro.com.</p>
+          </section>
+        </article>
+      </div>
+    </main>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

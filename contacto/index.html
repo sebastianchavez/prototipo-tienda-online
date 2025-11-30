@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Contacto - Señales Viales</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2C3E50",
+            "secondary": "#F39C12",
+            "background-light": "#F4F4F4",
+            "background-dark": "#101922",
+            "text-light": "#34495E",
+            "text-dark": "#E0E0E0",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#333333] dark:text-slate-200">
+  <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <!-- TopNavBar -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+      <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 lg:px-8">
+        <div class="flex items-center gap-8">
+          <div class="flex items-center gap-3 text-primary dark:text-white">
+            <div class="size-6">
+              <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+              </svg>
+            </div>
+            <a href="/prototipo-tienda-online/" class="text-xl font-bold">Señales Pro</a>
+          </div>
+          <nav class="hidden items-center gap-9 lg:flex" id="navMenu">
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+              href="/prototipo-tienda-online/productos">Productos</a>
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary" href="/prototipo-tienda-online/nosotros">Nosotros</a>
+            <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary" href="/prototipo-tienda-online/contacto">Contacto</a>
+          </nav>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="/prototipo-tienda-online/carrito"
+            class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors relative flex items-center">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+            <span
+              class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">1</span>
+          </a>
+          <a href="/prototipo-tienda-online/perfil" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer"
+            style="background-image: url('../assets/imgs/no-profile.jpg')"></a>
+          <button class="md:hidden flex items-center justify-center h-10 w-10 text-primary dark:text-white"
+            id="btnMenu">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <div class="container mx-auto px-4 py-16 sm:py-24">
+        <!-- PageHeading -->
+        <div class="mb-16 text-center">
+          <p class="text-primary text-base font-bold uppercase tracking-wider">Contáctanos</p>
+          <p class="mt-2 text-4xl font-black leading-tight tracking-tighter text-[#0d141b] dark:text-white sm:text-5xl">
+            Estamos aquí para ayudarte</p>
+          <p class="mx-auto mt-4 max-w-2xl text-lg font-normal leading-normal text-slate-500 dark:text-slate-400">
+            Rellena el formulario o utiliza nuestros datos de contacto directo. Nuestro equipo está listo para responder
+            a tus preguntas.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-16 lg:grid-cols-5">
+          <!-- Left Column: Contact Info & Map -->
+          <div class="lg:col-span-2 flex flex-col gap-12">
+            <!-- Contact Details List -->
+            <div class="flex flex-col gap-8">
+              <!-- ListItem Phone -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20 shrink-0 size-12">
+                  <span class="material-symbols-outlined text-2xl">phone</span>
+                </div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-base font-medium leading-normal text-[#0d141b] dark:text-slate-100">+1 (555) 123-4567
+                  </p>
+                  <p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">Lunes a Viernes, 9am
+                    - 5pm</p>
+                </div>
+              </div>
+              <!-- ListItem Email -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20 shrink-0 size-12">
+                  <span class="material-symbols-outlined text-2xl">mail</span>
+                </div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-base font-medium leading-normal text-[#0d141b] dark:text-slate-100">
+                    ventas@señalesdetrafico.com</p>
+                  <p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">Respondemos en 24
+                    horas</p>
+                </div>
+              </div>
+              <!-- ListItem Address -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="flex items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20 shrink-0 size-12">
+                  <span class="material-symbols-outlined text-2xl">location_on</span>
+                </div>
+                <div class="flex flex-col justify-center">
+                  <p class="text-base font-medium leading-normal text-[#0d141b] dark:text-slate-100">Av. Seguridad Vial
+                    123, Ciudad Capital</p>
+                  <p class="text-sm font-normal leading-normal text-slate-500 dark:text-slate-400">Visítanos en nuestro
+                    horario de atención</p>
+                </div>
+              </div>
+            </div>
+            <!-- Map -->
+            <div class="mt-4">
+              <h3 class="text-lg font-bold text-[#0d141b] dark:text-slate-50 mb-4">Nuestra Ubicación</h3>
+              <div class="aspect-video w-full overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+                <img alt="Mapa mostrando la ubicación de la oficina en una ciudad." class="h-full w-full object-cover"
+                  data-alt="Mapa mostrando la ubicación de la oficina en una ciudad." data-location="Ciudad Capital"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0iAwXWZzbWYL8ogK-tSKYn_47iE3mO8uyXq1Yxz-kOlHPGbC7_QIXpSy68-TJkLsWcX9l_KyzDCUN-WxcfvQNUudu8wYoDs-76o8gvlZUEcrgnLx9XcuoYqgW3XpRtWeQCpJlRoOxXja24NvjjLUxqNyiYYDGfh0A2YE51vTo-a3-3zM5CVex2A7uRzijhmxWCgEbeKX2Azk5lBHB_C3t3XH5RQJOl1-sJWoheaSgzWfoMfyEzBcQ-qxetlILxx5l8OJG09TpYChy" />
+              </div>
+            </div>
+          </div>
+          <!-- Right Column: Contact Form -->
+          <div class="lg:col-span-3">
+            <div
+              class="bg-white dark:bg-slate-900 p-8 sm:p-10 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+              <h3 class="text-2xl font-bold text-[#0d141b] dark:text-slate-50 mb-6">Envíanos tu consulta</h3>
+              <form action="#" class="space-y-6" method="POST">
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    for="full-name">Nombre Completo</label>
+                  <input autocomplete="name"
+                    class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-11"
+                    id="full-name" name="full-name" placeholder="Tu nombre completo" type="text" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5" for="email">Correo
+                    Electrónico</label>
+                  <input autocomplete="email"
+                    class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-11"
+                    id="email" name="email" placeholder="tu@email.com" type="email" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    for="subject">Asunto</label>
+                  <input
+                    class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm h-11"
+                    id="subject" name="subject" placeholder="Ej: Cotización de productos" type="text" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                    for="message">Mensaje</label>
+                  <textarea
+                    class="block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                    id="message" name="message" placeholder="Escribe tu mensaje aquí..." rows="5"></textarea>
+                </div>
+                <div>
+                  <button
+                    class="flex w-full items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    type="submit">
+                    Enviar Mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col items-center justify-between gap-4 md:flex-row">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-2xl">traffic</span>
+            <p class="text-sm text-slate-600 dark:text-slate-400">© 2025 Señales Viales. Todos los derechos
+              reservados.</p>
+          </div>
+          <div class="flex items-center gap-6">
+            <a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary" href="/prototipo-tienda-online/terminos">Términos y
+              condiciones</a>
+            <a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary" href="/prototipo-tienda-online/politicas">Políticas de
+              privacidad</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

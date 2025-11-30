@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Políticas de Privacidad - Señales Viales</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2C3E50",
+            "secondary": "#F39C12",
+            "background-light": "#F4F4F4",
+            "background-dark": "#101922",
+            "text-light": "#34495E",
+            "text-dark": "#E0E0E0",
+          },
+          fontFamily: {
+            "display": ["Public Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-gray-200">
+  <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+        <div class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-3 lg:px-8">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-3 text-primary dark:text-white">
+              <div class="size-6">
+                <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+                </svg>
+              </div>
+              <a href="/prototipo-tienda-online/" class="text-xl font-bold">Señales Pro</a>
+            </div>
+            <nav class="hidden items-center gap-9 lg:flex" id="navMenu">
+              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+                href="/prototipo-tienda-online/productos">Productos</a>
+              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+                href="/prototipo-tienda-online/nosotros">Nosotros</a>
+              <a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary"
+                href="/prototipo-tienda-online/contacto">Contacto</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="/prototipo-tienda-online/carrito"
+              class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors relative flex items-center">
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <span
+                class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">1</span>
+            </a>
+            <a href="/prototipo-tienda-online/perfil" class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 cursor-pointer"
+              style="background-image: url('../assets/imgs/no-profile.jpg')"></a>
+            <button class="md:hidden flex items-center justify-center h-10 w-10 text-primary dark:text-white"
+              id="btnMenu">
+              <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="flex flex-1 justify-center py-10 px-4 sm:px-6 lg:px-8">
+        <div class="layout-content-container flex flex-col max-w-4xl flex-1">
+          <div class="flex flex-wrap justify-between gap-3 p-4">
+            <h1 class="text-[#0d141b] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
+              Políticas de Privacidad</h1>
+          </div>
+          <p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal pb-3 pt-1 px-4">Última
+            actualización: 30 de noviembre de 2025</p>
+          <div class="space-y-8 mt-6">
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                1. Introducción</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">
+                Bienvenido a nuestra Política de Privacidad. Esta política describe cómo recopilamos, usamos y
+                protegemos la información personal que nos proporciona a través de nuestro sitio web. Su privacidad es
+                de suma importancia para nosotros y estamos comprometidos a proteger sus datos.</p>
+            </div>
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                2. Información que Recopilamos</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">Podemos
+                recopilar varios tipos de información, incluyendo, entre otros: información de identificación personal
+                (nombre, dirección de correo electrónico, número de teléfono), información de pago y facturación, e
+                información técnica como su dirección IP y datos de navegación a través de cookies.</p>
+            </div>
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                3. Uso de la Información</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">La
+                información que recopilamos se utiliza para procesar sus pedidos, brindar soporte al cliente, mejorar
+                nuestro sitio web y servicios, y, con su consentimiento, para enviarle comunicaciones de marketing. No
+                venderemos ni alquilaremos su información personal a terceros.</p>
+            </div>
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                4. Cómo Protegemos sus Datos</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">
+                Implementamos una variedad de medidas de seguridad para mantener la seguridad de su información
+                personal. Utilizamos encriptación SSL para transacciones y restringimos el acceso a su información
+                personal a empleados autorizados que necesitan conocerla para operar, desarrollar o mejorar nuestros
+                servicios.</p>
+            </div>
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                5. Cookies y Tecnologías de Seguimiento</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">Nuestro
+                sitio web utiliza "cookies" para mejorar su experiencia. Las cookies nos ayudan a recordar y procesar
+                los artículos en su carrito de compras, entender y guardar sus preferencias para futuras visitas y
+                compilar datos agregados sobre el tráfico del sitio para que podamos ofrecer mejores experiencias.</p>
+            </div>
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                6. Derechos del Usuario</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">Usted
+                tiene derecho a acceder, rectificar o eliminar su información personal. También tiene derecho a oponerse
+                al procesamiento de sus datos y a retirar su consentimiento en cualquier momento. Para ejercer estos
+                derechos, por favor contáctenos a través de la información proporcionada a continuación.</p>
+            </div>
+            <div>
+              <h2
+                class="text-[#0d141b] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 text-left pb-3 pt-5">
+                7. Información de Contacto</h2>
+              <p class="text-[#0d141b] dark:text-gray-300 text-base font-normal leading-relaxed pb-3 pt-1 px-4">Si tiene
+                alguna pregunta sobre esta Política de Privacidad o sobre nuestras prácticas de manejo de datos, puede
+                contactarnos en: <a class="text-primary hover:underline"
+                  href="mailto:privacidad@senalesviales.com">privacidad@senalesviales.com</a>.</p>
+            </div>
+          </div>
+          <div class="mt-12 p-6 rounded-lg bg-primary/10 dark:bg-primary/20">
+            <div class="flex flex-col items-center text-center">
+              <div class="mb-4 text-primary text-3xl">
+                <span aria-hidden="true" class="material-symbols-outlined !text-4xl">contact_support</span>
+              </div>
+              <h3 class="text-lg font-bold text-[#0d141b] dark:text-white">¿Tiene preguntas sobre su privacidad?</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-300 max-w-md">Nuestro equipo está aquí para ayudar. No
+                dude en ponerse en contacto si tiene alguna inquietud sobre cómo manejamos sus datos.</p>
+              <a class="mt-6 inline-block bg-primary text-white font-medium text-sm px-6 py-2.5 rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                href="mailto:privacidad@senalesviales.com">
+                Contactar a Soporte
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>
